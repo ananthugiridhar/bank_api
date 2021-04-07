@@ -6,7 +6,7 @@ const connect = require("./connect.js");
 
 app.use(express.json());
 
-require('dotenv').config();
+//require('dotenv').config();
 
 
 //route
@@ -15,7 +15,7 @@ var pg = require('pg');
 //or native libpq bindings
 //var pg = require('pg').native
 
-var conString = `postgres://sagvlgma:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:5432/${process.env.DB_DATABASE}`//Can be found in the Details page
+var conString = `postgres://sagvlgma:zsnnSdlBcDPNxUTLyWvTAiJIXXiiQhwW@queenie.db.elephantsql.com:5432/sagvlgma`//Can be found in the Details page
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
@@ -97,7 +97,7 @@ if(port == null || port == ""){
 }
 
 
-app.listen(port, ()=>{
+app.listen(process.env.PORT, ()=>{
     console.log("server connected successfully");
 })
 
