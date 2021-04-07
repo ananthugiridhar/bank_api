@@ -15,7 +15,7 @@ var pg = require('pg');
 //or native libpq bindings
 //var pg = require('pg').native
 
-var conString = `postgres://sagvlgma:zsnnSdlBcDPNxUTLyWvTAiJIXXiiQhwW@queenie.db.elephantsql.com:5432/sagvlgma`//Can be found in the Details page
+var conString = `postgres://sagvlgma:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME}`//Can be found in the Details page
 var client = new pg.Client(conString);
 client.connect(function(err) {
   if(err) {
