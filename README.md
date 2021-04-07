@@ -1,6 +1,8 @@
 # bank_api
 REST service that can fetch bank details
 
+## BACKEND CODING TEST
+
 ## Live link : [LIVE LINK](https://guarded-beach-71537.herokuapp.com/api/branches/autocomplete?q=RTGS&limit=3&offset=0)
 
 ## TECH STACK
@@ -17,9 +19,11 @@ use PostgreSQL as your backend DB. Since the free-tier of Heroku has a limit of 
 can use another DB provider (eg: you can use clever-cloud.com to host your Postgres DB by
 following steps).
 Essentials your applications should have:
-1. Autocomplete API to return possible matches based on the branch name ordered by
-IFSC code (ascending order) with limit and offset.
-a. Endpoint: /api/branches/autocomplete?q=<>
+
+
+**1. Autocomplete API to return possible matches based on the branch name ordered by
+IFSC code (ascending order) with limit and offset.**
+a. Endpoint: **/api/branches/autocomplete?q=<>**
 b. Example: /api/branches/autocomplete?q=RTGS&limit=3&offset=0
 
 
@@ -69,9 +73,9 @@ ROAD, AKOLA. 444001",
 ```
 
 
-2. Search API to return possible matches across all columns and all rows, ordered by
-IFSC code (ascending order) with limit and offset.
-a. Endpoint: /api/branches?q=<>
+**2. Search API to return possible matches across all columns and all rows, ordered by
+IFSC code (ascending order) with limit and offset.**
+a. Endpoint: **/api/branches?q=<>**
 b. Example: /api/branches?q=Bangalore&limit=4&offset=0
 
 ### CURL
