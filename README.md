@@ -21,8 +21,13 @@ Essentials your applications should have:
 IFSC code (ascending order) with limit and offset.
 a. Endpoint: /api/branches/autocomplete?q=<>
 b. Example: /api/branches/autocomplete?q=RTGS&limit=3&offset=0
-c. Sample response:
 
+
+### CURL
+```
+curl -i -H "Accept: application/json" https://guarded-beach-71537.herokuapp.com/api/branches/autocomplete?q=RTGS&limit=3&offset=0
+```
+c. Sample response:
 ```
 {
 "branches": [{
@@ -68,6 +73,12 @@ ROAD, AKOLA. 444001",
 IFSC code (ascending order) with limit and offset.
 a. Endpoint: /api/branches?q=<>
 b. Example: /api/branches?q=Bangalore&limit=4&offset=0
+
+### CURL
+```
+curl -i -H "Accept: application/json" https://guarded-beach-71537.herokuapp.com/api/branches?q=Bangalore&limit=4&offset=0
+```
+
 c. Sample response:
 ```
 {
@@ -108,5 +119,13 @@ c. Sample response:
 }]
 }
 ```
-Deliverables:
+
+## TASK DONE
+   * setting nodejs server
+   * setting up postgreSQL database connection
+   * API 
+   * deploying database in elephantSQL
+   * testing API
+   * deploying server in Heroku
+   * tesiting of application
     
