@@ -14,7 +14,7 @@ require('dotenv').config();
 var pg = require('pg');
 //or native libpq bindings
 //var pg = require('pg').native
-//"postgres://sagvlgma:zsnnSdlBcDPNxUTLyWvTAiJIXXiiQhwW@queenie.db.elephantsql.com:5432/sagvlgma"
+
 var conString = `postgres://sagvlgma:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:5432/${process.env.DB_DATABASE}`//Can be found in the Details page
 var client = new pg.Client(conString);
 client.connect(function(err) {
@@ -91,9 +91,14 @@ app.get("/api/branches", async(req, res)=>{
 
 
 
+let port = process.env.PORT;
+if(port == null || port == ""){
+    port = 3000;
+}
 
-app.listen(3000, ()=>{
-    console.log("server connected at port 3000");
+
+app.listen(port, ()=>{
+    console.log("server connected successfully");
 })
 
 

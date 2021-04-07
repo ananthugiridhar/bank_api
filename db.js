@@ -7,7 +7,6 @@ const database = (process.env.DB_DATABASE);
 const host = (process.env.DB_HOST);
 const port = process.env.DB_PORT;
 
-console.log("auth", userid, password,database,host);
 
 const pool = new Pool({
     user: userid,
