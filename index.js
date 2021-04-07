@@ -97,7 +97,7 @@ if(port == null || port == ""){
 }
 
 
-app.listen(process.env.PORT, ()=>{
+app.listen(port, ()=>{
     console.log("server connected successfully");
 })
 
